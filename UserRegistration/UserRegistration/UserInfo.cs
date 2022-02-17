@@ -12,7 +12,7 @@ namespace UserRegistration
     {
         //UC-1 valid first name
         public void ValidateFirstName()
-        {   
+        {
             Console.WriteLine("\nPlease Enter your First Name:");
             string firstName = Console.ReadLine();
             //First name starts with Cap and has minimun 3 characters
@@ -27,23 +27,40 @@ namespace UserRegistration
                 Console.WriteLine("First Name is InValid");
                 ValidateFirstName();
             }
-            //UC-2 valid last name
-             public void ValidateLastName()
-            {
-                Console.WriteLine("\nPlease Enter your Last Name:");
-                string lastName = Console.ReadLine();
-               // Last name starts with Cap and has minimun 3 characters
-                string lastName_pattern = "^[A-Z][a-zA-Z]{2,}$";
+        }
+        //UC-2 valid last name
+        public void ValidateLastName()
+        {
+            Console.WriteLine("\nPlease Enter your Last Name:");
+            string lastName = Console.ReadLine();
+            // Last name starts with Cap and has minimun 3 characters
+            string lastName_pattern = "^[A-Z][a-zA-Z]{2,}$";
 
-                if (Regex.IsMatch(lastName, lastName_pattern))
-                {
-                    Console.WriteLine("Last Name is Valid");
-                }
-                else
-                {
-                    Console.WriteLine("Last Name is not Valid");
-                    ValidateLastName();
-                }
+            if (Regex.IsMatch(lastName, lastName_pattern))
+            {
+                Console.WriteLine("Last Name is Valid");
+            }
+            else
+            {
+                Console.WriteLine("Last Name is InValid");
+                ValidateLastName();
+            }
+        }
+        public static void ValidateEmail()
+        {
+            Console.WriteLine("\nPlease Enter your Email-ID:");
+            Console.WriteLine("Note: E.g. abc.xyz@bl.co.in - Email has 3 mandatory parts (abc, bl & co) and 2 optional (xyz & in) with precise @ and . positions");
+            string email = Console.ReadLine();
+            string email_pattern = @"^[a-zA-Z0-9]{3,10}([._+-][a-zA-Z0-9]{1,10})?@[a-zA-Z0-9]{1,10}[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3})?$";
+
+            if (Regex.IsMatch(email, email_pattern))
+            {
+                Console.WriteLine("Email is Valid");
+            }
+            else
+            {
+                Console.WriteLine("Email is not Valid");
+                ValidateEmail();
             }
         }
     }
