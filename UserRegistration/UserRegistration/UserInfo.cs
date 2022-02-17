@@ -46,6 +46,7 @@ namespace UserRegistration
                 ValidateLastName();
             }
         }
+        //UC-3 valid email
         public static void ValidateEmail()
         {
             Console.WriteLine("\nPlease Enter your Email-ID:");
@@ -63,6 +64,7 @@ namespace UserRegistration
                 ValidateEmail();
             }
         }
+        //UC_4 valid mobile number
         public static void ValidateMobileNumber()
         {
             Console.WriteLine("\nPlease Enter your Mobie Number:");
@@ -78,6 +80,24 @@ namespace UserRegistration
             {
                 Console.WriteLine("Mobie Number is InValid");
                 ValidateMobileNumber();
+            }
+        }
+        //UC5 valid password
+        public static void ValidatePassword()
+        {
+            Console.WriteLine("\nPlease Enter your Password:");
+            string password = Console.ReadLine();
+            //Password must contain min 8 characters
+            string password_pattern = "^[a-zA-Z]{8,}$";
+
+            if (Regex.IsMatch(password, password_pattern))
+            {
+                Console.WriteLine("Password is Valid");
+            }
+            else
+            {
+                Console.WriteLine("Password is not Valid");
+                ValidatePassword();
             }
         }
     }
