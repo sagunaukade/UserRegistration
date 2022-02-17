@@ -82,13 +82,14 @@ namespace UserRegistration
                 ValidateMobileNumber();
             }
         }
-        //UC5 valid password
+        //UC5 valid password 
+        //UC6 Atleast one upper case
         public static void ValidatePassword()
         {
             Console.WriteLine("\nPlease Enter your Password:");
             string password = Console.ReadLine();
-            //Password must contain min 8 characters
-            string password_pattern = "^[a-zA-Z]{8,}$";
+            //Password must contain one upper case
+            string password_pattern = "^(?=.*[a-z])(?=.*[A-Z]).{8,}$";
 
             if (Regex.IsMatch(password, password_pattern))
             {
@@ -96,7 +97,7 @@ namespace UserRegistration
             }
             else
             {
-                Console.WriteLine("Password is not Valid");
+                Console.WriteLine("Password is InValid");
                 ValidatePassword();
             }
         }
