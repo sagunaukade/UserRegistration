@@ -84,12 +84,13 @@ namespace UserRegistration
         }
         //UC5 valid password 
         //UC6 Atleast one upper case
+        //UC7
         public static void ValidatePassword()
         {
             Console.WriteLine("\nPlease Enter your Password:");
             string password = Console.ReadLine();
             //Password must contain one upper case
-            string password_pattern = "^(?=.*[a-z])(?=.*[A-Z]).{8,}$";
+            string password_pattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$";
 
             if (Regex.IsMatch(password, password_pattern))
             {
