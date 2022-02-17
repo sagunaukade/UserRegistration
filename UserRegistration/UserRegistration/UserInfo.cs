@@ -11,7 +11,7 @@ namespace UserRegistration
     public class UserInfo
     {
         //UC-1 valid first name
-        public void ValidateFirstName()
+        public static void ValidateFirstName()
         {
             Console.WriteLine("\nPlease Enter your First Name:");
             string firstName = Console.ReadLine();
@@ -29,7 +29,7 @@ namespace UserRegistration
             }
         }
         //UC-2 valid last name
-        public void ValidateLastName()
+        public static void ValidateLastName()
         {
             Console.WriteLine("\nPlease Enter your Last Name:");
             string lastName = Console.ReadLine();
@@ -59,8 +59,25 @@ namespace UserRegistration
             }
             else
             {
-                Console.WriteLine("Email is not Valid");
+                Console.WriteLine("Email is InValid");
                 ValidateEmail();
+            }
+        }
+        public static void ValidateMobileNumber()
+        {
+            Console.WriteLine("\nPlease Enter your Mobie Number:");
+            string mobNum = Console.ReadLine();
+            // Country code follow by space and 10 digit number
+            string mobNum_pattern = "^[+]?91[ -][1-9][0-9]{9}$";
+
+            if (Regex.IsMatch(mobNum, mobNum_pattern))
+            {
+                Console.WriteLine("Mobie Number is Valid");
+            }
+            else
+            {
+                Console.WriteLine("Mobie Number is InValid");
+                ValidateMobileNumber();
             }
         }
     }
