@@ -9,7 +9,7 @@ namespace UserRegistrationUsingLambdaExp
     internal class Program
     {
         //Instance Variable
-        public static string firstName, result;
+        public static string firstName;
         public static string lastName;
 
         public static void Main(string[] args)
