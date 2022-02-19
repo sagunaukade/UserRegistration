@@ -1,0 +1,3 @@
+C:\Users\ganes\source\repos\FELLOWSHIP\UserRegistrationUsingLambdaExp\UserRegistrationUsingLambdaExp\obj\Debug\UserRegistrationUsingLambdaExp.csproj.AssemblyReference.cache
+C:\Users\ganes\source\repos\FELLOWSHIP\UserRegistrationUsingLambdaExp\UserRegistrationUsingLambdaExp\obj\Debug\UserRegistrationUsingLambdaExp.csproj.SuggestedBindingRedirects.cache
+C:\Users\ganes\source\repos\FELLOWSHIP\UserRegistrationUsingLambdaExp\UserRegistrationUsingLambdaExp\obj\Debug\UserRegistrationUsingLambdaExp.csproj.CoreCompileInputs.cache
